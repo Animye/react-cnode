@@ -5,8 +5,8 @@ class App extends Component {
     return (
       <div>
         <span>hello</span>
-
         <div style={{ width: 200, height: 200, backgroundColor: 'pink' }} />
+        <h1>第二次上传</h1>
       </div>
     )
   }
