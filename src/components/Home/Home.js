@@ -104,7 +104,7 @@ const Nav = styled.ul`
   background-color: #f6f6f6;
   align-items: center;
   padding-left: 10px;
-  li {
+  li > a {
     margin-right: 20px;
     cursor: pointer;
     color: #80bd01;
