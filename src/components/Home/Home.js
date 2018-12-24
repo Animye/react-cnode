@@ -76,6 +76,7 @@ class Home extends Component {
 }
 
 export default Home
+
 const Wrap = styled.div`
   width: 960px;
   /* border-radius: 8px; */
