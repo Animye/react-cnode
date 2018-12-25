@@ -17,6 +17,19 @@ class Create extends Component {
           <Link to='/'>主页</Link>
           <span>/ 发布话题</span>
         </div>
+        <div>
+          <span>选择板块：</span>
+
+          <select name='' id='' style={{ width: 220, height: 30 }}>
+            <option value='' selected>
+              请选择
+            </option>
+            <option value=''>分享</option>
+            <option value=''>问答</option>
+            <option value=''>招聘</option>
+            <option value=''>客户端测试</option>
+          </select>
+        </div>
         <input
           className='title'
           type='text'
@@ -29,7 +42,9 @@ class Create extends Component {
           value={content}
           onChange={this.handleArea}
         />
-        <button onClick={this.add}>提交</button>
+        <button onClick={this.add} className='up'>
+          提交
+        </button>
       </Wrap>
     )
   }
@@ -58,7 +73,8 @@ class Create extends Component {
 export default Create
 const Wrap = styled.div`
   width: 960px;
-  background-color: #e1e1e1;
+  height: 100vh;
+  background-color: #fff;
   .top {
     background-color: #f6f6f6;
   }
@@ -73,15 +89,32 @@ const Wrap = styled.div`
   .title {
     display: block;
     font-size: 14px;
-    width: 99%;
-    line-height: 40px;
-
+    width: 98%;
+    line-height: 28px;
     outline: 0;
+    border-radius: 4px;
     margin: 20px 0;
+    text-indent: 28px;
+    border: 1px solid #dfdfdf;
   }
   .content {
-    width: 99%;
-    height: 200px;
+    width: 98%;
+    height: 400px;
     outline: 0;
+    resize: none;
+  }
+  .up {
+    margin-top: 50px;
+    margin-left: 20px;
+    font-size: 16px;
+    width: 80px;
+    line-height: 40px;
+    color: #fff;
+    transition: all 0.5s;
+    border-radius: 6px;
+    background-color: #0089d1;
+    :hover {
+      background-color: #0053d4;
+    }
   }
 `

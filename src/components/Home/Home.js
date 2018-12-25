@@ -105,13 +105,19 @@ const Nav = styled.ul`
   background-color: #f6f6f6;
   align-items: center;
   padding-left: 10px;
+  li {
+    width: 60px;
+    text-align: center;
+    display: flex;
+  }
   li > a {
-    margin-right: 20px;
-    cursor: pointer;
-    color: #80bd01;
+    border-radius: 4px;
+    color: #7ac500;
+    font-size: 14px;
     :hover {
       color: #08c;
     }
+    width: 36px;
   }
   li > .active {
     background-color: #80bd01;

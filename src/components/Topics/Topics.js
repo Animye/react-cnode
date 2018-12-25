@@ -38,8 +38,8 @@ class Topics extends Component {
               </span>
               {e.top ? <span className='top'>置顶</span> : ''}
               <Link className='text' to={`/topic/${e.id}`}>
-                {e.title}
-                <Moment fromNow locale='zh-cn'>
+                <span className='title'> {e.title}</span>
+                <Moment className='time' fromNow locale='zh-cn'>
                   {e.last_reply_at}
                 </Moment>
               </Link>
@@ -72,22 +72,31 @@ const Main = styled.div`
     }
   }
   .text {
+    display: flex;
     flex-grow: 1;
     color: #333333;
     font-size: 16px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+
+    justify-content: space-between;
     :hover {
       text-decoration: underline;
     }
   }
-  /* a > .time {
-    flex-grow: 1;
+  .text > .title {
+    width: 700px;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
+  }
+  .text > .time {
+    /* overflow: hidden;
+    text-overflow: ellipsis; */
+    width: 75px;
+    text-align: right;
     color: #888;
-  } */
+
+    margin-right: 20px;
+  }
   img {
     width: 30px;
     border-radius: 3px;
